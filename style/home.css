@@ -140,3 +140,50 @@ body {
     display: block;
   }
 }
+
+/* Home */
+.home {
+  position: relative;
+}
+.home .title,
+.home .image01,
+.home .image02,
+.home .image03 {
+  position: absolute;
+}
+.home .title {
+  width: 100%;
+  z-index: 1;
+  color: #fff;
+  font-family: 'Sansita Swashed', cursive;
+  padding-top: 250px;
+  text-align: center;
+  font-size: 2em;
+}
+.home .image01,
+.home .image02,
+.home .image03 {
+  width: 100%;
+  height: 500px;
+  z-index: -1;
+}
+.home .image01 {
+  background: url('../image/home01.avif') no-repeat;
+  background-size: cover;
+  background-position: 20% 70%;
+}
+.home .image02 {
+  background: url('../image/home02.avif') no-repeat;
+  background-size: cover;
+  background-position: 20% 30%;
+}
+.home .image03 {
+  background: url('../image/home03.avif') no-repeat;
+  background-size: cover;
+  background-position: 55% 40%;
+}
+@media(min-width: 700px) {
+  .home .title {
+    font-size: 3em;
+  }
+}
