@@ -1,0 +1,55 @@
+
+/*
+  1. about
+*/
+
+.about {
+  padding-top: 500px;
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about .title {
+  font-size: 1.4em;
+  margin: 70px 0 30px 0;
+  font-weight: bold;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.about .image01 {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 30px;
+  background: url('../image/about01.jpg') no-repeat;
+  background-size: cover;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -o-bordr-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+.about .name {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+.about .detail {
+  margin-bottom: 15px;
+}
+.about .detail span {
+  display: none;
+  margin: 0 10px 0 -103px;
+  font-weight: bold;
+  color: #B8860B;
+}
+.about .detail a {
+  color: #000;
+}
+.about .detail a i{
+  font-size: 1.6em;
+  margin-right: 7px;
+}
+.about .phone,
+.about .mail {
+  margin-bottom: 5px;
+  font-size: 1.2em;
+}
