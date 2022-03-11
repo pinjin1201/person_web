@@ -1,5 +1,6 @@
 /*
   1. side
+  2. thank message
 */
 
 /* Side */
@@ -108,4 +109,21 @@
 .data .copyright {
   margin-top: 25px;
   font-size: 0.7em;
+}
+
+/* Thank message */
+.thank-message {
+  display: none;
+  width: 180px;
+  height: 40px;
+  padding-top: 11px;
+  padding-left: 9px;
+  background: #000;
+  color: #fff;
+  position: fixed;
+  bottom: 95px;
+  right: 16px;
+  z-index: 1;
+  opacity: 0.9;
+  box-shadow: 5px 5px 10px #000;
 }
