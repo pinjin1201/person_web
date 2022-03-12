@@ -8,7 +8,8 @@
   width: 100%;
   margin: 100px auto 0;
 }
-.work01 > .title {
+.work01 > .title,
+.work02-2 > .title {
   font-size: 1.4em;
   margin-top: 90px;
   font-weight: bold;
@@ -117,6 +118,9 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 130px;
+}
+.work02-2 > .title {
+  margin-bottom: 50px;
 }
 .work02-2 a {
   color: #000;
