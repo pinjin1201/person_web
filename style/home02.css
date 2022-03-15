@@ -27,6 +27,7 @@ body {
   padding: 15px 20px;
   position: fixed;
   top: 0;
+    z-index: 2;
 }
 .mobile-menu .title,
 .web-menu .title {
@@ -84,7 +85,6 @@ body {
 /* Web Menu*/
 .web-menu {
   display: none;
-  z-index: 2;
 }
 .web-menu .menu {
   display: flex;

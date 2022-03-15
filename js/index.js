@@ -1,6 +1,8 @@
 
 'use strict'
 
+// Mobile Menu
+const $mobileMenu = $('.mobile-menu')
 // Mobile Menu Clicked
 const $M_M_C = $('.mobile-menu-clicked')
 // Web Menu
@@ -73,10 +75,10 @@ function renderMenu(items) {
   for (let item in items) {
     content += `
       <div class="item">
-      <a href="#${items[item].toLowerCase()}">
-        ${items[item]}
-      </a>
-    </div>
+        <a href="#${items[item].toLowerCase()}">
+          ${items[item]}
+        </a>
+      </div>
     `
   }
   $M_M_C.html(content)
@@ -121,6 +123,18 @@ function renderSideItems(items) {
 renderMenu(menu)
 renderSideMenu(menu)
 renderSideItems(side)
+
+// click mobile menu lines
+$mobileMenu.on('click', '.lines', function(event) {
+  $mobileMenu.hide()
+  $M_M_C.show()
+})
+
+// click mobile menu item
+$M_M_C.on('click', '.item', function(event) {
+  $M_M_C.hide()
+  $mobileMenu.show()
+})
 
 // play home image 
 function playHomeImage() {
