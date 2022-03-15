@@ -168,21 +168,22 @@ $window.on('scroll', function(event) {
   const window = $(this).scrollTop()
   
   if (window >= skill) {
-    changeSkillStyle()
+    setInterval(changeSkillStyle, 4000)
     $window.off('scroll')
   }
   function changeSkillStyle() {
     $skillItem.animate({
-      'width': '+=40',
-      'height': '+=40'
-    }, 1000, function() {
+      'width': '+=10',
+      'height': '+=10'
+    }, 2500, function () {
       $(this).css({
-        'width': '-=40',
-        'height': '-=40'
+        'width': '-=10',
+        'height': '-=10'
       })
-      
+
     })
   }
+  changeSkillStyle()
 })
 
 // change WORK content
