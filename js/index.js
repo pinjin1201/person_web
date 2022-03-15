@@ -4,11 +4,11 @@
 // Mobile Menu
 const $mobileMenu = $('.mobile-menu')
 // Mobile Menu Clicked
-const $M_M_C = $('.mobile-menu-clicked')
+const $mobileMenuClick = $('.mobile-menu-clicked')
 // Web Menu
-const $W_M = $('.web-menu .menu') 
+const $webMenu = $('.web-menu .menu') 
 // Side Menu
-const $S_M = $('.side-menu')
+const $sideMenu = $('.side-menu')
 // Side items block
 const $side = $('.side .items')
 // Home image
@@ -81,8 +81,8 @@ function renderMenu(items) {
       </div>
     `
   }
-  $M_M_C.html(content)
-  $W_M.html(content)
+  $mobileMenuClick.html(content)
+  $webMenu.html(content)
 }
 // render side menu HTML
 function renderSideMenu(items) {
@@ -99,7 +99,7 @@ function renderSideMenu(items) {
       </div>
     `
   }
-  $S_M.html(content)
+  $sideMenu.html(content)
 }
 // render side items HTML
 function renderSideItems(items) {
@@ -127,12 +127,12 @@ renderSideItems(side)
 // click mobile menu lines
 $mobileMenu.on('click', '.lines', function(event) {
   $mobileMenu.hide()
-  $M_M_C.show()
+  $mobileMenuClick.show()
 })
 
 // click mobile menu item
-$M_M_C.on('click', '.item', function(event) {
-  $M_M_C.hide()
+$mobileMenuClick.on('click', '.item', function(event) {
+  $mobileMenuClick.hide()
   $mobileMenu.show()
 })
 
