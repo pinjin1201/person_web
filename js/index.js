@@ -13,6 +13,12 @@ const $side = $('.side .items')
 const $homeImages = $('.home .image')
 // About image 
 const $aboutImage = $('.about .image01')
+// Skill
+const $skill = $('.skill')
+const $skillItem = $('.skill .item')
+const $window = $(window)
+// Work
+const $work = $('.work')
 
 // Menu data
 const menu = {
@@ -130,4 +136,28 @@ $aboutImage.on('mouseover', function(event) {
 })
 $aboutImage.on('mouseout', function (event) {
   $(this).css('background-image', 'url(image/about01.jpg)')
+})
+
+// change SKILL style
+$window.on('scroll', function(event) {
+  if ($skill.length === 0) return
+  const skill = Math.floor(Number($skill.offset().top)) - 75
+  const window = $(this).scrollTop()
+  
+  if (window >= skill) {
+    changeSkillStyle()
+    $window.off('scroll')
+  }
+  function changeSkillStyle() {
+    $skillItem.animate({
+      'width': '+=40',
+      'height': '+=40'
+    }, 1000, function() {
+      $(this).css({
+        'width': '-=40',
+        'height': '-=40'
+      })
+      
+    })
+  }
 })
