@@ -56,7 +56,16 @@ const side = {
     d4: '有多餘的時間會嘗試鋼琴、創作音樂的領域。'
   }
 }
-
+// Work item content
+const workItemJs = [
+  'Color game',
+  'Wedding web',
+  'Note Todo'
+]
+const workItemApi = [
+  'Life test',
+  'Movie List'
+]
 
 // render mobile menu clicked and web menu HTML
 function renderMenu(items) {
@@ -159,5 +168,67 @@ $window.on('scroll', function(event) {
       })
       
     })
+  }
+})
+
+// change WORK content
+$work.on('mouseover', '.item', function(event) {
+  const $this = $(this)
+  let content = ''
+
+  // add class
+  function addClass(item) {
+    item.addClass('animate-style')
+  }
+  // show HTML
+  function showOverContent(item, text) {
+    item.html(text)
+  }
+  // js
+  if (event.target.matches('#work-js')) {
+    $this.css('background', 'yellow')
+    workItemJs.forEach(item => {
+      content += `
+        • ${item}<br/>
+      `
+    })
+    addClass($this)
+    showOverContent($this, content)
+    // api
+  } else if (event.target.matches('#work-api') || $this.find('span')) {
+    workItemApi.forEach(item => {
+      content += `
+        • ${item}<br/>
+      `
+    })
+    addClass($this)
+    showOverContent($this, content)
+  }
+})
+$work.on('mouseout', '.item', function (event) {
+  const $this = $(this)
+  let content = ''
+
+  // remove class
+  function removeClass(item) {
+    item.removeClass('animate-style')
+  }
+  // show HTML
+  function showOutContent(item, text) {
+    item.html(text)
+  }
+  // js
+  if (event.target.matches('#work-js')) {
+    $this.css('background', 'url(image/work01.png) no-repeat')
+    removeClass($this)
+    showOutContent($this, content)
+    // api
+  } else if (event.target.matches('#work-api')) {
+    content = `
+      <span class="api-up">API</span>
+      <span class="api-down">串接</span>
+    `
+    removeClass($this)
+    showOutContent($this, content)
   }
 })
