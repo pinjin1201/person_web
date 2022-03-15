@@ -23,8 +23,10 @@
   width: 200px;
   height: 200px;
   margin-bottom: 30px;
-  background: url('../image/about01.jpg') no-repeat;
+  background-image: url('../image/about01.jpg');
+  background-repeat: no-repeat;
   background-size: cover;
+  border: 5px solid #000;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   -o-bordr-radius: 50%;

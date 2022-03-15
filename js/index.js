@@ -10,7 +10,9 @@ const $S_M = $('.side-menu')
 // Side items block
 const $side = $('.side .items')
 // Home image
-const $H_Images = $('.home .image')
+const $homeImages = $('.home .image')
+// About image 
+const $aboutImage = $('.about .image01')
 
 // Menu data
 const menu = {
@@ -107,17 +109,25 @@ renderSideItems(side)
 
 // play home image 
 function playHomeImage() {
-  const imageLength = $H_Images.length
+  const imageLength = $homeImages.length
   let originalIndex = 0
 
-  $H_Images.eq(originalIndex).fadeIn()
+  $homeImages.eq(originalIndex).fadeIn()
 
   function playImage() {
     const nextIndex = (originalIndex + 1) % imageLength
-    $H_Images.eq(originalIndex).fadeOut()
-    $H_Images.eq(nextIndex).fadeIn()
+    $homeImages.eq(originalIndex).fadeOut()
+    $homeImages.eq(nextIndex).fadeIn()
     originalIndex = nextIndex
   }
   setInterval(playImage, 3000)
 }
 playHomeImage()
+
+// change ABOUT image
+$aboutImage.on('mouseover', function(event) {
+  $(this).css('background-image', 'url(image/about02.jpg)')
+})
+$aboutImage.on('mouseout', function (event) {
+  $(this).css('background-image', 'url(image/about01.jpg)')
+})
