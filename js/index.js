@@ -9,6 +9,8 @@ const $W_M = $('.web-menu .menu')
 const $S_M = $('.side-menu')
 // Side items block
 const $side = $('.side .items')
+// Home image
+const $H_Images = $('.home .image')
 
 // Menu data
 const menu = {
@@ -102,3 +104,20 @@ function renderSideItems(items) {
 renderMenu(menu)
 renderSideMenu(menu)
 renderSideItems(side)
+
+// play home image 
+function playHomeImage() {
+  const imageLength = $H_Images.length
+  let originalIndex = 0
+
+  $H_Images.eq(originalIndex).fadeIn()
+
+  function playImage() {
+    const nextIndex = (originalIndex + 1) % imageLength
+    $H_Images.eq(originalIndex).fadeOut()
+    $H_Images.eq(nextIndex).fadeIn()
+    originalIndex = nextIndex
+  }
+  setInterval(playImage, 3000)
+}
+playHomeImage()
