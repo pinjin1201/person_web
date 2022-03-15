@@ -22,7 +22,9 @@ const $window = $(window)
 // Work
 const $work = $('.work')
 // Fixed data
-const fixedData = $('.fixed-data')
+const $fixedData = $('.fixed-data')
+// thank message
+const $thankMessage = $('.thank-message')
 
 // Menu data
 const menu = {
@@ -159,17 +161,32 @@ $aboutImage.on('mouseout', function (event) {
   $(this).css('background-image', 'url(image/about01.jpg)')
 })
 
-// change SKILL style
+// 1. hide fixed data
+// 2. show thank message
+// 3. change SKILL style
 $window.on('scroll', function(event) {
+  // Fixed Data
+  const $this = $(this)
+  function hideFixedData(item) {
+    item.find('.fixed-data-icon').show()
+    item.find('.text').hide()
+  }
+  hideFixedData($fixedData)
+  if ($this.scrollTop() >= 3100) {
+    hideFixedData($fixedData)
+  }
+  // Thank Message
+  if ($this.scrollTop() >= 2200 && $this.scrollTop() < 2700) {
+    $thankMessage.show()
+  } else {
+    $thankMessage.hide()
+  }
+  // SKILL
   if ($skill.length === 0) return
   const skill = Math.floor(Number($skill.offset().top)) - 75
   const window = $(this).scrollTop()
   
   if (window >= skill) {
-    setInterval(changeSkillStyle, 4000)
-    $window.off('scroll')
-  }
-  function changeSkillStyle() {
     $skillItem.animate({
       'width': '+=10',
       'height': '+=10'
@@ -181,7 +198,6 @@ $window.on('scroll', function(event) {
 
     })
   }
-  changeSkillStyle()
 })
 
 // change WORK content
@@ -244,4 +260,16 @@ $work.on('mouseout', '.item', function (event) {
     removeClass($this)
     showOutContent($this, content)
   }
+})
+
+// show fixed data
+$fixedData.on('click, mouseover', function(event) {
+  const $this = $(this)
+  $this.find('.fixed-data-icon').hide()
+  $this.find('.text').show()
+})
+$fixedData.on('mouseout', function (event) {
+  const $this = $(this)
+  $this.find('.fixed-data-icon').show()
+  $this.find('.text').hide()
 })
