@@ -131,20 +131,21 @@ body {
   height: 13.6px;
   background: #000;
   margin-right: 15px;
+  cursor: pointer;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   -o-bordr-radius: 50%;
   -ms-border-radius: 50%;
   border-radius: 50%;
 }
+.side-menu .item .icon a{
+  color: #000;
+  text-decoration: none;
+}
 .side-menu .item .text {
   letter-spacing: 3px;
   font-size: 0.7em;
   padding-top: 1px;
-}
-.side-menu .item .text a{
-  color: #000;
-  text-decoration: none;
 }
 @media(min-width: 800px) {
   .side-menu {

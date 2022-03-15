@@ -21,6 +21,8 @@ const $skillItem = $('.skill .item')
 const $window = $(window)
 // Work
 const $work = $('.work')
+// Fixed data
+const fixedData = $('.fixed-data')
 
 // Menu data
 const menu = {
@@ -90,12 +92,8 @@ function renderSideMenu(items) {
   for (let item in items) {
     content += `
       <div class="item">
-        <div class="icon"></div>
-        <div class="text">
-          <a href="#${items[item].toLowerCase()}">
-            ${items[item].toUpperCase()}
-          </a>
-        </div>
+        <a href="#${items[item].toLowerCase()}" class="icon"></a>
+        <div class="text">${items[item].toUpperCase()}</div>
       </div>
     `
   }
