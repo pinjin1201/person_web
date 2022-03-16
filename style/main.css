@@ -57,6 +57,8 @@
 .about .mail {
   margin-bottom: 5px;
   font-size: 1.2em;
+  color: #000;
+  text-decoration: none;
 }
 
 /* Skill */
