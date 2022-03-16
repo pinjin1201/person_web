@@ -143,6 +143,7 @@ function playHomeImage() {
     $homeImages.eq(nextIndex).fadeIn()
     originalIndex = nextIndex
   }
+  playImage()
   setInterval(playImage, 3000)
 }
 playHomeImage()
