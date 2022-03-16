@@ -101,7 +101,17 @@
 }
 .data .text {
   margin-bottom: 8px;
-  color: #000;
+}
+.data .text a{
+  color: #fff;
+  text-decoration: none;
+}
+.data .text a:hover{
+  color: #fff;
+  text-decoration: none;
+}
+.data .text a:visited{
+  color: #fff;
   text-decoration: none;
 }
 .data .copyright {

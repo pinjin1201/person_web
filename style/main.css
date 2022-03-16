@@ -57,6 +57,16 @@
 .about .mail {
   margin-bottom: 5px;
   font-size: 1.2em;
+}
+.about .phone a {
+  color: #000;
+  text-decoration: none;
+}
+.about .phone a:hover {
+  color: #000;
+  text-decoration: none;
+}
+.about .phone a:visited {
   color: #000;
   text-decoration: none;
 }

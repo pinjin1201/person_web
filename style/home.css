@@ -176,6 +176,18 @@ body {
   font-size: 14px;
   opacity: 0.9;
 }
+.fixed-data .text a {
+  color: #fff;
+  text-decoration: none;
+}
+.fixed-data .text a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.fixed-data .text a:visited {
+  color: #fff;
+  text-decoration: none;
+}
 .fixed-data .text .phone {
   margin-bottom: 5px;
 }
