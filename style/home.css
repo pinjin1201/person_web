@@ -210,17 +210,17 @@ body {
   z-index: -1;
 }
 .home .image01 {
-  background: url('../image/home01.avif') no-repeat;
+  background: url('../image/home01.jpg') no-repeat;
   background-size: cover;
   background-position: 20% 70%;
 }
 .home .image02 {
-  background: url('../image/home02.avif') no-repeat;
+  background: url('../image/home02.jpg') no-repeat;
   background-size: cover;
   background-position: 20% 30%;
 }
 .home .image03 {
-  background: url('../image/home03.avif') no-repeat;
+  background: url('../image/home03.jpg') no-repeat;
   background-size: cover;
   background-position: 55% 40%;
 }

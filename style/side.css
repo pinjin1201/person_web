@@ -22,15 +22,15 @@
   box-shadow: -5px -5px 5px #B0C4DE;
 }
 .side .image.code {
-  background: url('../image/side01.avif') no-repeat;
+  background: url('../image/side01.jpg') no-repeat;
   background-size: cover;
 }
 .side .image.sport {
-  background: url('../image/side02.avif') no-repeat;
+  background: url('../image/side02.jpg') no-repeat;
   background-size: cover;
 }
 .side .image.read {
-  background: url('../image/side03.avif') no-repeat;
+  background: url('../image/side03.jpg') no-repeat;
   background-size: cover;
 }
 .side .text {
