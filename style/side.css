@@ -33,10 +33,6 @@
   background: url('../image/side03.avif') no-repeat;
   background-size: cover;
 }
-.side .image.music {
-  background: url('../image/side04.avif') no-repeat;
-  background-size: cover;
-}
 .side .text {
   width: 200px;
   margin: 15px 0 35px;
