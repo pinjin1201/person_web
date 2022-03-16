@@ -155,9 +155,8 @@ $aboutImage.on('mouseout', function (event) {
   $(this).css('background-image', 'url(image/about01.jpg)')
 })
 
-// 1. hide fixed data
-// 2. show thank message
-// 3. change SKILL style
+// 1. show thank message
+// 2. change SKILL style
 $window.on('scroll', function(event) {
   // Fixed Data
   const $this = $(this)
