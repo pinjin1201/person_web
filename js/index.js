@@ -5,8 +5,6 @@
 const $mobileMenu = $('.mobile-menu')
 // Mobile Menu Clicked
 const $mobileMenuClick = $('.mobile-menu-clicked')
-// Web Menu
-const $webMenu = $('.web-menu .menu') 
 // Side Menu
 const $sideMenu = $('.side-menu')
 // Side items block
@@ -67,21 +65,6 @@ const workItemApi = [
   'Movie List'
 ]
 
-// render mobile menu clicked and web menu HTML
-function renderMenu(items) {
-  let content = ''
-  for (let item in items) {
-    content += `
-      <div class="item">
-        <a href="#${items[item].toLowerCase()}">
-          ${items[item]}
-        </a>
-      </div>
-    `
-  }
-  $mobileMenuClick.html(content)
-  $webMenu.html(content)
-}
 // render side menu HTML
 function renderSideMenu(items) {
   let content = ''
@@ -114,7 +97,7 @@ function renderSideItems(items) {
   }
   $sideItem.html(content)
 }
-renderMenu(menu)
+
 renderSideMenu(menu)
 renderSideItems(side)
 
