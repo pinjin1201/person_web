@@ -101,6 +101,8 @@
 }
 .data .text {
   margin-bottom: 8px;
+  color: #000;
+  text-decoration: none;
 }
 .data .copyright {
   margin-top: 25px;
