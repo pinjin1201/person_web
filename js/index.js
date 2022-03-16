@@ -10,7 +10,7 @@ const $webMenu = $('.web-menu .menu')
 // Side Menu
 const $sideMenu = $('.side-menu')
 // Side items block
-const $side = $('.side .items')
+const $sideItem = $('.side .items')
 // Home image
 const $homeImages = $('.home .image')
 // About image 
@@ -87,7 +87,7 @@ function renderSideMenu(items) {
   let content = ''
   for (let item in items) {
     content += `
-      <div class="item">
+      <div class="item ${items[item].toLowerCase()}-side">
         <a href="#${items[item].toLowerCase()}" class="icon"></a>
         <div class="text">${items[item].toUpperCase()}</div>
       </div>
@@ -112,7 +112,7 @@ function renderSideItems(items) {
       </div>
     `
   }
-  $side.html(content)
+  $sideItem.html(content)
 }
 renderMenu(menu)
 renderSideMenu(menu)
