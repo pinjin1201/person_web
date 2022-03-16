@@ -175,24 +175,14 @@ $window.on('scroll', function(event) {
   } else {
     $thankMessage.hide()
   }
-  // SKILL
-  if ($skill.length === 0) return
-  const skill = Math.floor(Number($skill.offset().top)) - 75
-  const window = $(this).scrollTop()
-  
-  if (window >= skill) {
-    $skillItem.animate({
-      'width': '+=10',
-      'height': '+=10'
-    }, 2500, function () {
-      $(this).css({
-        'width': '-=10',
-        'height': '-=10'
-      })
-
-    })
-  }
 })
+
+// SKILL
+function toggleSkill() {
+  $skillItem.fadeOut(2000).fadeIn(2000)
+}
+toggleSkill()
+setInterval(toggleSkill, 4000)
 
 // change WORK content
 $work.on('mouseover', '.item', function(event) {
